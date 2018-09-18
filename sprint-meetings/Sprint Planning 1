@@ -1,0 +1,30 @@
+1.	Agenda
+
+State what is this meeting about?
+The meeting is about figuring out total tasks, and assigning them to different people. Due date for the tasks. 
+
+2.	Goal
+What is the aim that you are trying to achieve by running this sprint?
+Setting up the structure of the project. Setting up the database. User login and registration. Sample homepage. 
+3.	Duration of the sprint
+
+6 Days. Start 18/09 to 24/09
+State the duration of the sprint
+
+4.	What is the team’s vision for this sprint?
+
+Which items of the product backlog will be committed to sprint backlog and why? 
+Login, Registration, Homepage, Database
+What will the potentially shippable product look like in the end? What features will it have in its working form?
+A basic layout of the site, with user registration and login. No cart or buying of product yet. Users should be able to see products in the homepage, but do not need to see details yet. 
+5.	Estimation in story points
+Team to estimate story points for each of the items. Provide some sort of justification.
+8 for creating database
+5 for homepage
+1 for documentation
+5 for products
+5 for Registration
+3 for Login
+1 for Logout
+
+total: 28 for first sprint
