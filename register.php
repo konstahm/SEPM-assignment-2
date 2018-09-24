@@ -31,12 +31,19 @@
 	  <input type="submit" name="submit" value="Submit">  
 	</form>
 <?php
-      echo $_POST['gname'];   
-      echo $_POST['fname']; 
-      echo $_POST['email']; 
-      echo $_POST['password']; 
-      echo $_POST['confirmPassword'];
-      echo $_POST['gender'];
+    
+   
+    if(isset($_POST['confirmPassword'])){
+      $pass = $_POST['password']; 
+      $cPass = $_POST['confirmPassword'];
+      if(isset($cPass)){
+        if($pass == $cPass){
+          echo "Password match";
+        }
+        else { echo "Password did not match..Try Again!!"; }
+      }  
+    
+    }
     
 	?>
 	</body>
