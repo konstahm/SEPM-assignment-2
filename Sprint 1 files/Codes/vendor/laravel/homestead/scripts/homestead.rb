@@ -66,7 +66,7 @@ class Homestead
       h.vmname = settings['names'] ||= 'homestead-7'
       h.cpus = settings['cpus'] ||= 1
       h.memory = settings['memory'] ||= 2048
-      h.differencing_disk = true
+      h.linked_clone = true
 
       if Vagrant.has_plugin?('vagrant-hostmanager')
         override.hostmanager.ignore_private_ip = true
@@ -231,7 +231,7 @@ class Homestead
             params += ' )'
           end
           s.path = script_dir + "/serve-#{type}.sh"
-          s.args = [site['map'], site['to'], site['port'] ||= '80', site['ssl'] ||= '443', site['php'] ||= '7.2', params ||= '', site['zray'] ||= 'false']
+          s.args = [site['map'], site['to'], site['port'] ||= '80', site['ssl'] ||= '443', site['php'] ||= '7.2', params ||= '', site['zray'] ||= 'false', site['exec'] ||= 'false']
 
           if site['zray'] == 'true'
             config.vm.provision 'shell' do |s|
@@ -496,7 +496,7 @@ class Homestead
     now = Time.now.strftime("%Y%m%d%H%M")
     config.trigger.before :destroy do |trigger|
       trigger.warn = "Backing up mysql database #{database}..."
-      trigger.run_remote = { inline: "mkdir -p #{dir} && mysqldump #{database} > #{dir}/#{database}-#{now}.sql" }
+      trigger.run_remote = { inline: "mkdir -p #{dir} && mysqldump --routines #{database} > #{dir}/#{database}-#{now}.sql" }
     end
   end
 
