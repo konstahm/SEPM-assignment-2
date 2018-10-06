@@ -22,6 +22,7 @@
       </div>
       <button type="submit" class="btn btn-primary">Sign In</button> {{ csrf_field() }}
     </form>
+    <p>Don't have an account yet? <a href="{{ route('user.signup')}}">Sign up first!</a></p>
   </div>
 
 </div>

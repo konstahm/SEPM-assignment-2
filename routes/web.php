@@ -21,9 +21,30 @@ Route::get('/add-to-cart/{id}', [
    'as' => 'product.addToCart'
 ]);
 
+Route::get('/reduce/{id}', [
+    'uses' => 'ProductController@getReduceByOne',
+    'as' => 'product.reduceByOne'
+]);
+Route::get('/remove/{id}', [
+    'uses' => 'ProductController@getRemoveItem',
+    'as' => 'product.remove'
+]);
+
 Route::get('/shopping-cart', [
    'uses' => 'ProductController@getCart',
    'as' => 'product.shoppingCart'
+]);
+
+Route::get('/checkout', [
+  'uses' => 'ProductController@getCheckout',
+  'as' => 'checkout',
+  'middleware' => 'auth'
+]);
+
+Route::post('/checkout', [
+  'uses' => 'ProductController@postCheckout',
+  'as' => 'checkout',
+  'middleware' => 'auth'
 ]);
 
 
@@ -59,16 +80,14 @@ Route::group(['prefix' => 'user'], function() {
 
     Route::get('/logout', [
       'uses' => 'UserController@getLogout',
-      'as' => 'user.logout',
-      'middleware' => 'auth'
+      'as' => 'user.logout'
     ]);
-    /*
+    
     Route::get('/profile', [
       'uses' => 'UserController@getProfile',
-      'as' => 'user.profile',
-      'middleware' => 'auth'
+      'as' => 'user.profile'
     ]);
-    */
+    
   });
 
 });
