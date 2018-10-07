@@ -7,8 +7,12 @@
 @section('content')
     @if(Session::has('cart'))
         <div class="row mt-5">
+          <div class="col">
+            <div class="clearfix">
+              <h1 class="text-center"><i class="fas fa-shopping-cart"></i> Shopping Cart</h1>
+            </div>
+            <hr>
             <div class="col-md-10 offset-md-1">
-
                 <table class="table table-bordered table-striped">
                   <thead class="thead-dark text-center">
                     <tr>
@@ -34,6 +38,7 @@
                   </tbody>
                 </table>
 
+            </div>
             </div>
         </div>
         <hr>
