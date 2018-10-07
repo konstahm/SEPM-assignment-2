@@ -1,7 +1,11 @@
 @extends('layouts.app')
 
+@section('title')
+  3Bay.io
+@endsection
+
 @section('content')
-<div class="row">
+<div class="row ">
   <div class="col-md-6 offset-md-3 mt-5">
     <h1>Sign Up</h1>
     @if(count($errors) > 0)

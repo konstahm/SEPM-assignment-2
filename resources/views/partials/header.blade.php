@@ -9,7 +9,7 @@
       <li class="nav-item">
         <a class="nav-link" style="width: 170px;" href="{{ route('product.shoppingCart') }}">
           <i class="fas fa-shopping-cart"></i> Shopping Cart
-          <span class="badge">{{ Session::has('cart') ? Session::get('cart')->totalQty : '' }}</span>
+          <span class="badge badge-danger">{{ Session::has('cart') ? Session::get('cart')->totalQty : '' }}</span>
         </a>
       </li>
       <li class="nav-item dropdown">

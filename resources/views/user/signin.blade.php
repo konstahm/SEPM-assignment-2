@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+  3Bay.io
+@endsection
+
 @section('content')
 <div class="row">
   <div class="col-md-6 offset-md-3 mt-5">

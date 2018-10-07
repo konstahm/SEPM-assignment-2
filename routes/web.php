@@ -21,10 +21,16 @@ Route::get('/add-to-cart/{id}', [
    'as' => 'product.addToCart'
 ]);
 
+Route::get('/add/{id}', [
+    'uses' => 'ProductController@getAddByOne',
+    'as' => 'product.addByOne'
+]);
+
 Route::get('/reduce/{id}', [
     'uses' => 'ProductController@getReduceByOne',
     'as' => 'product.reduceByOne'
 ]);
+
 Route::get('/remove/{id}', [
     'uses' => 'ProductController@getRemoveItem',
     'as' => 'product.remove'
@@ -82,12 +88,12 @@ Route::group(['prefix' => 'user'], function() {
       'uses' => 'UserController@getLogout',
       'as' => 'user.logout'
     ]);
-    
+
     Route::get('/profile', [
       'uses' => 'UserController@getProfile',
       'as' => 'user.profile'
     ]);
-    
+
   });
 
 });

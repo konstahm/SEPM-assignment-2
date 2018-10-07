@@ -29,6 +29,18 @@ class ProductController extends Controller
     	return redirect()->route('product.index');
     }
 
+    public function getAddByOne($id) {
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+        $cart = new Cart($oldCart);
+        $cart->addByOne($id);
+        if (count($cart->items) > 0) {
+            Session::put('cart', $cart);
+        } else {
+            Session::forget('cart');
+        }
+        return redirect()->route('product.shoppingCart');
+    }
+
     public function getReduceByOne($id) {
         $oldCart = Session::has('cart') ? Session::get('cart') : null;
         $cart = new Cart($oldCart);
@@ -70,14 +82,14 @@ class ProductController extends Controller
     $oldCart = Session::get('cart');
     $cart = new Cart($oldCart);
     $total = $cart->totalPrice;
-    return view('shop.checkout', ['total' => $total]); 
+    return view('shop.checkout', ['total' => $total]);
   }
 
   public function postCheckout(Request $request)
   {
     if(!Session::has('cart')) {
       return redirect()->route('shop.shopping-cart');
-    } 
+    }
     $oldCart = Session::get('cart');
     $cart = new Cart($oldCart);
 
@@ -85,7 +97,7 @@ class ProductController extends Controller
     try {
       $charge = Charge::create(array(
         "amount" => $cart->totalPrice*100,
-        "currency" => "usd",
+        "currency" => "aud",
         "source" => $request->input('stripeToken'),
         "description" => "Charge for test"
         ));

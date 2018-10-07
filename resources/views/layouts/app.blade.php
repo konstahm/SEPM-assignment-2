@@ -18,16 +18,18 @@
 </head>
 <body>
     <header>
-      @include('partials.header')
+        @include('partials.header')
     </header>
 
-  <main role="main" class="h-100">
-    <div class="album py-5 bg-light">
-      <div class="container justify-content-center align-items-center h-100">
-        @yield('content')
+  <div class="row mt-5"></div>
+
+    <main role="main">
+      <div class="album py-5 h-100">
+        <div class="container">
+          @yield('content')
+        </div>
       </div>
-    </div>
-  </main>
+    </main>
 
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>

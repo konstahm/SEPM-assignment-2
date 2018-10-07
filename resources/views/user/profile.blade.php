@@ -1,28 +1,38 @@
 @extends('layouts.app')
 
+@section('title')
+  3Bay.io
+@endsection
+
 @section('content')
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <h1>User Profile</h1>
+    <div class="row mt-5">
+        <div class="col">
+          <div>
+            <h1>Order History</h1>
             <hr>
-            <h2>My Orders</h2>
+          </div>
+            <div class="mt-4">
             @foreach($orders as $order)
-                <div class="panel panel-default">
+                <div class="panel mt-3">
                     <div class="panel-body">
-                        <ul class="list-group">
+                        <ul class="list-group clearfix">
                             @foreach($order->cart->items as $item)
-                                <li class="list-group-item">
-                                    <span class="badge">${{ $item['price'] }}</span>
-                                    {{ $item['item']['title'] }} | {{ $item['qty'] }} Units
-                                </li>
-                            @endforeach
+                            <li class="list-group-item bg-light">
+                                <span class="">{{ $item['item']['title'] }} </span>
+                                <span class="badge badge-danger float-right"> ${{ $item['price'] }}</span>
+                                <span class="float-right font-weight-bold">{{ $item['qty'] }} Units |&nbsp</span>
+                                  @endforeach
+                            </li>
                         </ul>
                     </div>
-                    <div class="panel-footer">
-                        <strong>Total Price: ${{ $order->cart->totalPrice }}</strong>
+                    <div class="panel-footer clearfix">
+                        <h5><strong class="float-right text-success mt-1">&nbsp AU$ {{ $order->cart->totalPrice }}</strong></h5>
+                        <strong class="float-right mt-1">Total Price: </strong>
                     </div>
+                    @endforeach
                 </div>
-            @endforeach
+
+          </div>
         </div>
     </div>
 @endsection
