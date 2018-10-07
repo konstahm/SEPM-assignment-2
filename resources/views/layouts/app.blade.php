@@ -21,9 +21,9 @@
       @include('partials.header')
     </header>
 
-    <main role="main">
+  <main role="main" class="h-100">
     <div class="album py-5 bg-light">
-      <div class="container">
+      <div class="container justify-content-center align-items-center h-100">
         @yield('content')
       </div>
     </div>

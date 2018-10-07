@@ -12,55 +12,74 @@ class ProductTableSeeder extends Seeder
     public function run()
     {
         $product = new \App\Product([
-          'imagePath' => 'https://static1.squarespace.com/static/59728c4da5790a92b3ce576f/59ea61d6692ebe1e522a8510/5b21cd502b6a2890518e2bde/1528941907047/KAWS_TogetherBrown.jpg?format=1500w',
-          'title' => 'KAWS: Together Vinyl Figure',
-          'description' => 'The vinyl is stylized in a classic design with KAWS classic eye motif highlighted in black.
-                            The figure features two interlocked Companions hugging, and stands at 11.5 inches tall.',
-          'price' => 310
+          'imagePath' => 'http://cdn.msy.com.au/20073-large_default/razer-mamba-elite-rz01-02560100-chroma-gaming-mouse.jpg',
+          'title' => 'Razer Mamba Elite (Chroma) Gaming Mouse',
+          'description' => 'Razer Mamba Elite (RZ01-02560100) Chroma 16000 DPI Gaming Mouse',
+          'price' => 97
         ]);
         $product->save();
 
         $product = new \App\Product([
-          'imagePath' => 'https://stockx.imgix.net/products/streetwear/Kaws-Together-Vinyl-Figure-Black.jpg?fit=fill&bg=FFFFFF&w=1400&h=1000&auto=format,compress&trim=color&q=90',
-          'title' => 'KAWS: Together Vinyl Figure (Black)',
-          'description' => 'The vinyl is stylized in an all-black design with KAWS classic eye motif highlighted in yellow.
-                            The figure features two interlocked Companions hugging, and stands at 11.5 inches tall.',
-          'price' => 310
+          'imagePath' => 'http://cdn.msy.com.au/19992-large_default/steelseries-62446-rival-600-dual-optical-7-programmable-button-12000cpi-gaming-mouse.jpg',
+          'title' => 'Steelseries Rival 600 (RGB) Gaming Mouse',
+          'description' => ' Steelseries (62446) Rival 600 Dual-Optical 7 programmable button 12000CPI Gaming Mouse',
+          'price' => 99
         ]);
         $product->save();
 
         $product = new \App\Product([
-          'imagePath' => 'https://cdna2.zoeysite.com/Adzpo594RQGDpLcjBynL1z/cache=expiry:31536000/compress/https://s3.amazonaws.com/zcom-media/sites/a0iE000000FF6rdIAD/media/catalog/product/a/s/astro_boy_grey.png',
-          'title' => 'KAWS: Astro Boy Companion Figure (Grey)',
-          'description' => 'Astro Boy usually shown in various heroic poses, the manga hero is here transformed into a pathetic figure,
-                            As with all his characters, KAWS brands Astro Boy with his trademark X to replace the original wide eyes.',
-          'price' => 4200
+          'imagePath' => 'http://cdn.msy.com.au/20180-large_default/corsair-darkcore-rgb-ch-9315011-ap-performance-wired-wireless-16000-dpi-optical-gaming-mouse.jpg',
+          'title' => 'Corsair Darkcore (RGB) Gaming Mouse',
+          'description' => 'Corsair Darkcore RGB (CH-9315011-AP) Performance Wired/Wireless 16000 DPI optical gaming mouse',
+          'price' => 129
         ]);
         $product->save();
 
         $product = new \App\Product([
-          'imagePath' => 'http://174.129.230.82/Hoca/Shop/engine/wp-content/uploads/2016/02/IMG_4580.jpg',
-          'title' => 'KAWS: Original Black Dissected Companion Figure',
-          'description' => 'KAWS Dissected Companion',
-          'price' => 500
+          'imagePath' => 'http://cdn.msy.com.au/11859-large_default/-razer-blackwidow-x-chroma-017602-rgb-mechanical-gaming-keyboard.jpg',
+          'title' => 'Razer BLACKWIDOW (Chroma) Mechanical Gaming Keyboard',
+          'description' => 'Razer BLACKWIDOW X CHROMA (017602) RGB Mechanical Gaming Keyboard',
+          'price' => 143
         ]);
         $product->save();
 
         $product = new \App\Product([
-          'imagePath' => 'https://cdn.shopify.com/s/files/1/0847/4326/products/kaws_smalllie_brown.jpg?v=1514677777',
-          'title' => 'KAWS: Small Lie Companion Figure (Brown)',
-          'description' => 'The vinyl is stylized in an brown design with KAWS classic eye motif highlighted in black.
-                            The figure features an emotional Companions.',
-          'price' => 300
+          'imagePath' => 'http://cdn.msy.com.au/14389-large_default/steelseries-64575-apex-m500-mx-blue-mechanical-gaming-keyboard.jpg',
+          'title' => 'Steelseries APEX (Blue) Mechanical Gaming Keyboard',
+          'description' => 'SteelSeries 64575 APEX M500 MX BLUE Mechanical Gaming Keyboard',
+          'price' => 119
         ]);
         $product->save();
 
         $product = new \App\Product([
-          'imagePath' => 'https://i1.wp.com/nasdank.com/wp-content/uploads/2018/08/Kaws-Small-Lie-Companion-Vinyl-Black.jpg?fit=1780%2C1780&ssl=1',
-          'title' => 'KAWS: Small Lie Companion Figure (Black)',
-          'description' => 'The vinyl is stylized in an all-black design with KAWS classic eye motif highlighted in black.
-                            The figure features an emotional Companions.',
-          'price' => 310
+          'imagePath' => 'http://cdn.msy.com.au/20199-large_default/corsair-gaming-k70-mk2-rgb-led-ch-9109010-na-cherry-mx-rgb-red-full-mechanical-keyboard.jpg',
+          'title' => 'Corsair K70 MK2 (RGB) Mechanical Gaming Keyboard',
+          'description' => 'Corsair Gaming K70 MK2 RGB LED (CH-9109010-NA) Cherry MX RGB RED Full Mechanical Keyboard',
+          'price' => 215
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'imagePath' => 'http://cdn.msy.com.au/17980-large_default/asus-rog-strix-xg258q-245-gaming-1ms-240hz-eyecare-free-sync-has-gameplus-dp-hdmi-usb30-game.jpg',
+          'title' => 'ASUS ROG STRIX 24.5" Gaming Monitor',
+          'description' => 'ASUS ROG STRIX (XG258Q) 24.5" Gaming 1ms 240Hz Eyecare Free-Sync HAS GamePlus DP HDMI USB30 Game',
+          'price' => 539
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'imagePath' => 'http://cdn.msy.com.au/17727-large_default/samsung-24-gaming-curve-lc24fg73fqexxy-1920x1080-1ms-144hz-freesync-d-port-hdmi-tilt-h-adj.jpg',
+          'title' => 'Samsung 24" Gaming Curve Monitor',
+          'description' => 'Samsung 24" Gaming Curve (LC24FG73FQEXXY) 1920x1080 1ms 144Hz FreeSync D/Port HDMI TILT H/ADJ',
+          'price' => 369
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'imagePath' => 'http://cdn.msy.com.au/14408-large_default/lg-ips-27-27mp59g-1920x1080-1ms-freesync-hdmi-dp12-d-sub-gaming-monitor.jpg',
+          'title' => 'LG IPS 27" 27MP59G Gaming Monitor',
+          'description' => 'LG IPS 27" 27MP59G 1920x1080 1ms FreeSync HDMI DP1.2 D-SUB Gaming Monitor',
+          'price' => 253
         ]);
         $product->save();
     }

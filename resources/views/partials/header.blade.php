@@ -17,6 +17,7 @@
         aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i> User</a>
         <div class="dropdown-menu" aria-labelledby="dropdown01">
           @if(Auth::check())
+            <a class="dropdown-item" href="{{ route('user.profile') }}">History</a>
               <a class="dropdown-item" href="{{ route('user.logout') }}">Logout</a>
           @else
               <a class="dropdown-item" href="{{ route('user.signup') }}">Sign Up</a>
